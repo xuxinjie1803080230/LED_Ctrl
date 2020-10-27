@@ -42,6 +42,7 @@ void  KeyInt(void)
   P2INP &=0x5E;
 }
 
+
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 * 函数名  ：KeyStateGet
 * 参数    ：unsigned char UCKeyNum 1 KEY1序号 2 KEY2 序号
