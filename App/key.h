@@ -1,36 +1,34 @@
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-* 文件名  ：led
-* 作者    ：xuxinjie
+* 文件名  ：key
+* 作者    ：wangsihui
 * 版本    ：V0.0.1
-* 时间    ：2020/10/20
-* 描述    ：led驱动头文件
+* 时间    ：2020/10/25
+* 描述    ：按键驱动头文件
 ********************************************************************
 * 副本
 *
 *>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
-
-#ifndef _LED_H
-#define _LED_H
+#ifndef _KEY_H
+#define _KEY_H
 /* 头文件 ----------------------------------------------------------------*/
 #include<ioCC2530.h>
 /* 宏定义 ----------------------------------------------------------------*/
+#define KEY_PRESS     0
+#define KEY_PELEASE   1
+#define KEY_ERROR     255
 /* 结构体或枚举 ----------------------------------------------------------------*/
-typedef enum enLedNum
+typedef enum enKeyNum
 {
-  LED_ALL_E,
-  LED_LED1_E,
-  LED_LED2_E,
-  LED_LED3_E,
-  LED_MAX
-}LED_NUM_E;
+    KEY_DEFAULT_E,
+    KEY_KEY1_E,
+    KEY_KEY2_E,
+    KEY_MAX
+}KEY_NUM_E;
 /* 函数声明----------------------------------------------------------------*/
-void  LedInit(void);
-void  LedOn(unsigned char ucLedNum);
-void  LedOff(unsigned char ucLedNum);
-void  LedToggle(unsigned char ucLedNum);
+void KeyInit(void);
+unsigned char KeyStateGet(unsigned char ucKeyNum);
 /* 外部变量引用 ----------------------------------------------------------------*/
-#endif // _LED_H
 
-
+#endif // _KEY_H
 

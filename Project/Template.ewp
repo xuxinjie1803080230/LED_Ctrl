@@ -2073,6 +2073,12 @@
   <group>
     <name>Driver</name>
     <file>
+      <name>$PROJ_DIR$\..\Driver\key.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Driver\key.h</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\led.c</name>
     </file>
     <file>
