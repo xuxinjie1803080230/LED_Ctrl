@@ -66,9 +66,9 @@ void  main(void)
       Delay(100);
       if( KEY_PRESS == KeyStateGet( KEY_KEY1_E ) )
       {
-      LedToggle(LED_LED1_E);
-      //等待按键松开
-      while( KEY_PRESS == KeyStateGet( KEY_KEY1_E ) );
+       //等待按键松开
+       while( KEY_PRESS == KeyStateGet( KEY_KEY1_E ) );
+       LedToggle(LED_LED1_E);
       }
     }
   }

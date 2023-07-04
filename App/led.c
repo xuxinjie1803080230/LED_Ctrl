@@ -142,23 +142,16 @@ void  LedToggle(unsigned char ucLedNum)
 {
  if ( LED_LED1_E == ucLedNum)
   {
-    LED1 =LED_OFF;
-    LED2 =LED_ON;
-    LED3 =LED_ON;
+    LED1 =~LED1;
   }
    else if ( LED_LED2_E == ucLedNum)
   {
-    LED2 =LED_OFF;
-    LED1 =LED_ON;
-    LED3 =LED_ON;
+    LED2 =~LED2;
   }
    else if ( LED_LED3_E == ucLedNum)
   {
-    LED3 =LED_OFF;
-    LED1 =LED_ON;
-    LED1 =LED_ON;
+    LED3 =~LED3;
   } 
-  
   
 }
 

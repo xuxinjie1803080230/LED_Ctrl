@@ -1,6 +1,6 @@
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 * 文件名  ：key
-* 作者    ：wangsihui
+* 作者    ：xuxinjie
 * 版本    ：V0.0.1
 * 时间    ：2020/10/25
 * 描述    ：按键的驱动文件
@@ -23,7 +23,7 @@
 * 函数名  ：KeyInt
 * 参数    ：void
 * 返回    ：void
-* 作者    ：wangsihui
+* 作者    ：xuxinjie
 * 时间    ：2020/10/25
 * 描述    ：按键I0的初始化
 ----------------------------------------------------------------*/
@@ -33,7 +33,7 @@ void  KeyInt(void)
   P0SEL &= 0xFD;
   P2SEL &= 0xFE;
   
-  //设置输入
+  //设置输入模式
   P0DIR &= 0xFD;
   P2DIR &= 0xFE;
   
@@ -44,24 +44,24 @@ void  KeyInt(void)
 
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 * 函数名  ：KeyStateGet
-* 参数    ：unsigned char UCKeyNum 1 KEY1序号 2 KEY2 序号
+* 参数    ：unsigned char ucKeyNum 1 KEY1序号 2 KEY2 序号
 * 返回    ：unsigned char 1 松开 0 按下 255 错误
-* 作者    ：wangsihui
+* 作者    ：xuxinjie
 * 时间    ：2020/10/25
 * 描述    ：获取按键状态
 ----------------------------------------------------------------*/
-unsigned char KeyStateGet (unsigned char UCKeyNum)
+unsigned char KeyStateGet (unsigned char ucKeyNum)
 {
   unsigned char ucKeyState;
   
-  if(KEY_KEY1_E == UCKeyNum)
+  if(KEY1 == ucKeyNum)
   {
-    ucKeyState = KEY1;
+    ucKeyState = KEY_KEY1_E;
     
   }
-  else if(KEY_KEY2_E == UCKeyNum)
+  else if(KEY2 == ucKeyNum)
   {
-    ucKeyState = KEY2;
+    ucKeyState = KEY_KEY2_E;
     
   }
   else
